@@ -34,9 +34,9 @@ const pool = require('../DBconnection.js');
 //     }
 // }
 
-// function getEmployee(callback) {
-
-// }
+function getPerson(id,callback) {
+	return pool.query("SELECT * FROM person WHERE id_angajat=" + id + ";");
+}
 
 // function deleteEmployee(employee, callback) {
 //     if (typeof callback == "function") {
@@ -48,13 +48,13 @@ const pool = require('../DBconnection.js');
 // }
 
 function getAllPersons(callback) {
-    return pool.query('SELECT * FROM person;');
+	return pool.query('SELECT * FROM person;');
 }
 
 module.exports = {
    // createEmployee: createEmployee,
   //  updateEmployee: updateEmployee,
-  //  getEmployee: getEmployee,
+    getPerson: getPerson,
   //  deleteEmployee: deleteEmployee,
-    getAllPersons: getAllPersons
+  getAllPersons: getAllPersons
 };

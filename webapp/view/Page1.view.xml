@@ -23,31 +23,31 @@
                                     </m:Toolbar>
                                 </m:headerToolbar>
                                 <m:columns>
-                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
+                                    <m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Phone" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
                                         <m:header>
                                             <m:Text text="CNP" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
                                         </m:header>
                                         <m:footer/>
                                     </m:Column>
-                                    <m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="WithoutHeader" mergeDuplicates="false">
+                                    <m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Inline" mergeDuplicates="false">
                                         <m:header>
                                             <m:Text text="Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
                                         </m:header>
                                         <m:footer/>
                                     </m:Column>
-                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
+                                    <m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="true" popinDisplay="Block" mergeDuplicates="false">
                                         <m:header>
-                                            <m:Text text="Company Code" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="Company" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
                                         </m:header>
                                         <m:footer/>
                                     </m:Column>
-                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                    <m:Column width="170px" hAlign="Left" vAlign="Top" minScreenWidth="Desktop" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
                                         <m:header>
-                                            <m:Text text="Document Type" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="Phone" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
                                         </m:header>
                                         <m:footer/>
                                     </m:Column>
-                                    <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
+                                   <!--  <m:Column width="auto" hAlign="Left" vAlign="Top" minScreenWidth="Tablet" demandPopin="false" popinDisplay="Inline" mergeDuplicates="false">
                                         <m:header>
                                             <m:Text text="User Name" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
                                         </m:header>
@@ -64,18 +64,15 @@
                                             <m:Text text="Amount (Local Currency)" width="auto" maxLines="2" wrapping="true" textAlign="Begin" textDirection="Inherit"/>
                                         </m:header>
                                         <m:footer/>
-                                    </m:Column>
+                                    </m:Column> -->
                                 </m:columns>
                                 <m:items>
-                                    <m:ColumnListItem type="Navigation">
+                                    <m:ColumnListItem type="Navigation" press="handleRouteMatched">
                                         <m:cells>
-                                            <m:Link text="{modelPersons>nume}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
-                                           <!--  <m:Text text="AK_012 Revoked" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-                                            <m:Text text="SAP Germany (002)" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-                                            <m:Text text="Invoice Posted" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-                                            <m:Link text="Denise Smith" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
-                                            <m:Text text="01.01.2014" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
-                                            <m:ObjectNumber number="765.00" unit="EUR" emphasized="true" state="None"/> -->
+                                            <m:Text text="{modelPersons>cnp}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <m:Text text="{modelPersons>nume} {modelPersons>prenume}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                                            <m:Text text="{modelPersons>firma}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
+                                            <m:Text text="{modelPersons>telefon}" width="auto" maxLines="1" wrapping="false" textAlign="Begin" textDirection="Inherit"/>
                                         </m:cells>
                                     </m:ColumnListItem>
                                 </m:items>

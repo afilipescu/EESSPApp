@@ -118,7 +118,7 @@
             "controlAggregation": "pages",
             "viewName": "Page2",
             "viewId": "Page2",
-            "viewLevel": 1,
+            "viewLevel": 2,
             "transition": "slide"
             }
             
@@ -126,7 +126,7 @@
          "routes": [
               
               {
-                "pattern": "Page1/:context:",
+                "pattern": "Page1",
                 "name": "Page1",
                 "target": [
                   "Page1"
@@ -142,7 +142,7 @@
               },
               
               {
-                "pattern": "Page2/:context:",
+                "pattern": "Page2",
                 "name": "Page2",
                 "target": [
                   "Page2"

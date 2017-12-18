@@ -23,6 +23,18 @@ module.exports = function() {
         });
     });
 
+    router.get('/person/:id_angajat', function(req, res, next) {
+        persistence.getPerson(req.params.id_angajat)
+        .then(d=>{
+            console.log("OK");
+            console.log(d);
+            res.send(d);
+            res.status(200).json(d);
+        })
+        .catch(err => {
+            res.status(500).send(err);
+        });
+    });
     // router.post('/angajat', function(req, res, next) {
     //     var employee = req.body;
     //     console.log(JSON.stringify(req.body));

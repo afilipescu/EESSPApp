@@ -1,9 +1,9 @@
 <mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.eesspApp.controller.Page2" xmlns:uxap="sap.uxap" xmlns:m="sap.m">
-    <uxap:ObjectPageLayout showTitleInHeaderContent="true" showHeaderContent="true" showAnchorBar="true" showFooter="false" subSectionLayout="TitleOnTop">
+    <uxap:ObjectPageLayout showTitleInHeaderContent="false" showHeaderContent="true" showAnchorBar="true" showFooter="false" subSectionLayout="TitleOnTop">
         <uxap:headerContent>
             <m:VBox alignItems="Stretch" direction="Column" fitContainer="false" width="auto" height="auto" justifyContent="Start" renderType="Div" visible="true" displayInline="false">
                 <m:items>
-                    <m:Link text="+33 6 1555 5353" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
+                    <m:Link text="{/nume} {/prenume}" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                     <m:Link text="test@sap.com" textAlign="Begin" width="auto" target="_blank" wrapping="false" enabled="true" visible="true" emphasized="false" subtle="false"/>
                 </m:items>
                 <m:layoutData/>
@@ -11,7 +11,7 @@
             <m:Label text="Hello and Welcome!" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
         </uxap:headerContent>
         <uxap:headerTitle>
-            <uxap:ObjectPageHeader objectImageURI="/build/uilibraries/content/static/image-canvas.svg" objectTitle="Title" objectSubtitle="Subtitle" headerDesign="Light" objectImageShape="Square" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
+            <uxap:ObjectPageHeader objectTitle="Title" objectSubtitle="Subtitle" headerDesign="Light" objectImageShape="Square" isObjectIconAlwaysVisible="false" isObjectTitleAlwaysVisible="false" isObjectSubtitleAlwaysVisible="false" isActionAreaAlwaysVisible="true">
                 <uxap:actions>
                     <m:Button text="Action Button" type="Transparent" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
                 </uxap:actions>
@@ -22,17 +22,24 @@
         <uxap:sections>
             <uxap:ObjectPageSection showTitle="true" title="Page Section Title" titleUppercase="true" visible="true">
                 <uxap:subSections>
-                    <uxap:ObjectPageSubSection title="Sub Section Title" mode="Expanded">
-                        <uxap:blocks>
-                            <m:Label text="Some random text" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
-                        </uxap:blocks>
+                    <uxap:ObjectPageSubSection title="Medical File" mode="Expanded">
+                       <!--  <uxap:blocks> -->
+                              <m:Label text="Some random text" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                    <!--     </uxap:blocks> -->
+
+     <m:Label text="Some random text" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                             <m:Label text="Some random text" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                              <m:Label text="Some random text" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                              <m:Label text="Some random text" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit"/>
+                           
+          
                         <uxap:moreBlocks/>
                         <uxap:actions/>
                     </uxap:ObjectPageSubSection>
                 </uxap:subSections>
                 <uxap:customAnchorBarButton/>
             </uxap:ObjectPageSection>
-            <uxap:ObjectPageSection showTitle="true" title="Page Section Title" titleUppercase="true" visible="true">
+            <!-- <uxap:ObjectPageSection showTitle="true" title="Page Section Title" titleUppercase="true" visible="true">
                 <uxap:subSections>
                     <uxap:ObjectPageSubSection title="Sub Section Title" mode="Expanded">
                         <uxap:blocks>
@@ -55,7 +62,7 @@
                     </uxap:ObjectPageSubSection>
                 </uxap:subSections>
                 <uxap:customAnchorBarButton/>
-            </uxap:ObjectPageSection>
+            </uxap:ObjectPageSection> -->
         </uxap:sections>
         <uxap:footer>
             <m:Bar design="Auto">
